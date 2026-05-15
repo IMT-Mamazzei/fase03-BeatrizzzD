@@ -38,6 +38,7 @@ Number = [0-9]+(\.[0-9]+)?([Ee][+-]?[0-9]+)?
 Letter = [a-zA-Z]
 Digit  = [0-9]
 Identifier = {Letter}({Letter}|{Digit}|_){0,31}
+OversizedIdentifier = {Letter}({Letter}|{Digit}|_){32,}
 
 %%
 /* ========================================================================= */
@@ -66,12 +67,12 @@ Identifier = {Letter}({Letter}|{Digit}|_){0,31}
     /* CUIDADO COM A ORDEM! O JFlex casa a regra que aparece primeiro se houver empate de tamanho. */
      /* Adicione os relacionais aqui e retorne Tag.REL_OP ... */
     /* Coloque os operadores duplos antes dos simples! */
-    "=="            {return symbol(sysm.REL_OP);}
-    "!="            {return symbol(sysm.REL_OP);}
-    "<="            {return symbol(sysm.REL_OP;)}
-    ">="            {return symbol(sysm.REL_OP;)}
-    "<"             {return symbol(sysm.REL_OP);}
-    ">"             {return symbol(sysm.REL_OP;)}
+    "=="            {return symbol(sym.REL_OP);}
+    "!="            {return symbol(sym.REL_OP);}
+    "<="            {return symbol(sym.REL_OP;)}
+    ">="            {return symbol(sym.REL_OP;)}
+    "<"             {return symbol(sym.REL_OP);}
+    ">"             {return symbol(sym.REL_OP);}
     "="             { return symbol(sym.ASSIGN); }
 
     /* TODO 6: Operadores Matemáticos (+, -, *, /, %) */
