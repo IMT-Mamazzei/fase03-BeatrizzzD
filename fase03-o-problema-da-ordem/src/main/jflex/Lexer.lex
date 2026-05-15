@@ -69,8 +69,8 @@ OversizedIdentifier = {Letter}({Letter}|{Digit}|_){32,}
     /* Coloque os operadores duplos antes dos simples! */
     "=="            {return symbol(sym.REL_OP);}
     "!="            {return symbol(sym.REL_OP);}
-    "<="            {return symbol(sym.REL_OP;)}
-    ">="            {return symbol(sym.REL_OP;)}
+    "<="            {return symbol(sym.REL_OP);}
+    ">="            {return symbol(sym.REL_OP);}
     "<"             {return symbol(sym.REL_OP);}
     ">"             {return symbol(sym.REL_OP);}
     "="             { return symbol(sym.ASSIGN); }
