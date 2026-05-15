@@ -33,10 +33,10 @@ non terminal expr;
 
 /* TODO 1: Declare a precedência para resolver a ambiguidade matemática. */
 /* Dica: O operador mais embaixo tem a MAIOR precedência!                */
+precedence right ELSE;
 precedence left REL_OP;
 precedence left ADD_OP;
 precedence left MUL_OP;
-precedence right ELSE;
 
 /* ========================================================================= */
 /* REGRAS DA GRAMÁTICA                                                       */
